@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogposts",
+  "info": {
+    "name": "blogpost"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    },
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

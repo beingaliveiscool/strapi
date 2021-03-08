@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurant",
+  "info": {
+    "name": "Restaurant",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "phoneNumber": {
+      "type": "biginteger"
+    },
+    "title": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "foodType": {
+      "via": "restaurants",
+      "model": "food-type"
+    }
+  }
+}
